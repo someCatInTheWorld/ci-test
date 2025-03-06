@@ -1,0 +1,15 @@
+on:
+  push:
+
+name: Test
+
+jobs:
+  my_job:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - name: Test
+      run: git branch
